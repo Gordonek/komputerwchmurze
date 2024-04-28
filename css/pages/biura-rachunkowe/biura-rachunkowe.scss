@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "../../components/navbar/navbar";
+@import "../../components/footer/footer";
+@import "../../global/scroll/scroll";
+@import "../../global/reset/reset";
+@import "../../global/animations/animations";
+header{
+    position: relative;
+    .left{
+        padding: 6rem 0 15rem 15rem;
+        h1{
+            color: $gray;
+            font-size: 4rem;
+            line-height: 110%;
+            width: 40%;
+            position: relative;
+            margin-bottom: 2rem;
+            span{
+                color: $blue;
+            }
+        }
+        h1::after{
+            content: "";
+            position: absolute;
+            width: 5rem;
+            border-radius: 10px;
+            height: 0.3rem;
+            bottom: -0.5rem;
+            left: 0%;
+            background-color: $yellow;
+        }
+        p{
+            color: $gray;
+            font-weight: 600;
+            font-size: 20px;
+            width: 40%;
+            line-height: 150%;
+            span{
+                color: $blue;
+            }
+        }
+        
+    }
+    .right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: 40%;
+        height: 80vh;
+        z-index: 1;
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#sekcja1{
+    position: relative;
+    .top-div{
+        padding: 10rem;
+        padding-left: 13rem;
+        background-color: $blue;
+        .up{
+            h2{
+                font-size: 3rem;
+                line-height: 120%;
+                color: white;
+                width: 45%;
+                margin-bottom: 3rem;
+                span{
+                    color: $yellow;
+                }
+            }
+        }
+        .down{
+            display: flex;
+            width: 100%;
+            .left, .right{
+                width: 50%;
+                p{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 150%;
+                    width: 80%;
+                    color: white;
+                }
+            }
+        }
+    }
+    .top-div::before{
+        content: "";
+        background-color: $blue;
+        position: absolute;
+        top: -20rem;
+        right: 0;
+        width: 30vw;
+        height: 20rem;
+    }
+    .top-div::after{
+        content: "";
+        background-color: $gray;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3rem;
+        height: 100%;
+    }
+}
+#sekcja2{
+    position: relative;
+    background-color: $gray;
+    padding-top: 10rem;
+    display: flex;
+    .left{
+        height: 80vh;
+        margin-top: -5rem;
+        width: 100rem;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        div{
+            width: 80%;
+            h2{
+                width: 90%;
+                line-height: 120%;
+                font-size: 3rem;
+                color: $blue;
+                margin-bottom: 3rem;
+            }
+            p{
+                color: white;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
+                margin: 2rem 0;
+                width: 80%;
+            }    
+        }
+    }
+}
+#sekcja3{
+    padding: 10rem;
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            margin: 0 2rem;
+            width: 15%;
+        }
+    }
+}
+#sekcja4{
+    height: 45rem;
+    background-color: $blue;
+    display: flex;
+    position: relative;
+    .first{
+        color: white;
+        width: 40rem;
+        padding: 7rem 10rem 6rem 15rem;
+        h2{
+            font-size: 3rem;
+            line-height: 100%;
+            span{
+                color: $yellow;
+            }
+        }
+        p{
+            line-height: 150%;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            border: 2px solid $yellow;
+            box-shadow: 3px 3px 0 0 white;
+            padding: 8px 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .second{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 10rem;
+        background-color: $yellow;
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            margin-right: 10rem;
+            line-height: 150%;
+            color: $gray;
+            font-weight: 400;
+            font-size: 24px;
+            span{
+                font-weight: 800;
+                position: relative;
+            }
+            span::after{
+                content: "";
+                position: absolute;
+                background-color: white;
+                width: 6rem;
+                height: 0.25rem;
+                border-radius: 10px;
+                bottom: -0.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .third{
+        background-color: $gray;
+        width: 30rem;
+        height: 25rem;
+        margin-top: -3rem;
+        padding: 5rem 3rem;
+        h3{
+            color: $yellow;
+            width: 90%;
+            line-height: 150%;
+            font-weight: 800;
+            font-size: 24px;
+        }
+        form{
+            margin: 2rem 0;
+            .input-box{
+                width: 80%;
+                padding: 5px;
+                border: 3px solid $yellow;
+                outline: none;
+                margin-bottom: 2rem;   
+            }   
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type="number"]{
+                margin-bottom: 0.5rem;
+                -moz-appearance: textfield;
+            }
+            .check{
+                margin-bottom: 2rem;
+                input[type=checkbox]{
+                    margin-right: 0.5rem;
+                }
+                color: white;
+                font-size: 0.7rem;
+                line-height: 150%;
+                width: 80%;
+            }
+            input[type=submit]{
+                background-color: $gray;
+                border: 3px solid $yellow;
+                box-shadow: 3px 3px 0 0 white;
+                color: white;
+                padding: 3px 35px;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}
+#sekcja5{
+    position: relative;
+    div.top{
+        padding-top: 10rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .text{
+            margin: 0 10%;
+            h2{
+                color: $gray;
+                line-height: 120%;
+                font-size: 3rem;
+                margin-bottom: 3rem;
+                width: 50%;
+                span{
+                    color: $blue;
+                }
+            }
+            h2+p{
+                width: 40%;
+                color: $gray;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+        div.squares{
+            display: flex;
+            flex-direction: row;
+            .square{
+                padding: 2rem;
+                margin: 2rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 30rem;
+                border: 5px solid $blue;
+                box-shadow: 5px 5px 0 0 $yellow, inset 5px 5px 0 0 $yellow;
+                .left{
+                    width: 40%;
+                    img{
+                        width: 80%;
+                    }
+                }
+                .right{
+                    width: 50%;
+                    p{
+
+                        color: $gray;
+                        line-height: 130%;
+                        font-weight: 500;
+                        font-size: 18px;
+                        margin-bottom: 3rem;
+                        span{
+                            color: $blue;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $blue;
+                        border: 2px solid $blue;
+                        box-shadow: 3px 3px 0 0 $yellow;
+                        padding: 0.5rem 1rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .top::before{
+        content: "";
+        position: absolute;
+        background-color: rgba(232, 222, 46, 0.4);
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 40%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+}
+@media (max-width: 1400px){
+    header{
+        .left{
+            padding: 5rem 0 5rem 5rem;
+            h1{
+                width: 60%;
+            }
+            p{
+                width: 50%;
+            }
+        }
+        .right{
+            display: none;
+        }
+    }
+    #sekcja1{
+        .top-div::before,.top-div::after{
+            display: none;
+        }
+        .top-div{
+            padding: 5rem;
+        }
+    }
+    #sekcja4{
+        .first{
+            padding: 5rem 10rem 6rem 5rem;
+        }
+        .second{
+            padding-left: 2rem;
+        }
+        .third{
+            padding: 5rem;
+            .input-box{
+                width: 90%;
+            }
+        }
+    }
+    #sekcja5{
+        .top{
+            .squares{
+                .square{
+                    width: 25rem !important;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px){
+    header{
+        .left{
+            h1{
+                font-size: 5rem;
+                width: 90%;
+            }
+            p{
+                font-size: 22px;
+                width: 80%;
+            }
+        }
+    }
+    #sekcja1{
+        .up{
+            h2{
+                width: 100% !important;
+            }
+        }
+        .down{
+            flex-wrap: wrap;
+            .left,.right{
+                width: 100% !important;
+            }
+            .left{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    #sekcja2{
+        padding-top: 2rem;
+        .left{
+            display: none;
+        }
+    }
+    #sekcja3{
+        padding: 10%;
+        div{
+            flex-wrap: wrap;
+            img{
+                width: 25%;
+            }
+        }
+    }
+    #sekcja4{
+        .second{
+            padding-left: 0;
+            width: 100%;
+            clip-path: none;
+            p{
+                margin-right: 0;
+            }
+        }
+        .third{
+            padding: 3rem;
+            margin-top: 2rem;
+            height: 27rem;
+            h3{
+                width: 100%;
+                font-size: 22px;
+            }
+            form{
+                .input-box{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+                .check{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    #sekcja5{
+        .top{
+            padding-top: 5rem !important;
+            .text{
+                h2{
+                    width: 100% !important;
+                }
+                p{
+                    width: 80% !important;
+                    margin-bottom: 2rem;
+                }
+            }
+            .squares{
+                flex-direction: column !important;
+                .square{
+                    width: 70% !important;
+                    .left{
+                        height: 10rem;
+                        width: 7rem !important;
+                        img{
+                            height: 100%;
+                            width: 100% !important;
+                        }
+                    }
+                    .right{
+                        width: 70% !important;
+                    }
+                }
+            }
+        }
+        .top::before{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1000px){
+    #sekcja4{
+        .first{
+            width: 20rem;
+            padding: 3rem;
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 20px !important;
+            }
+        }
+    }
+}
+@media (max-width: 700px){
+    header{
+        .left{
+            padding: 4rem;
+            h1{
+                font-size: 2.5rem;
+                width: 90%;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    #sekcja1{
+        .up{
+            h2{
+                font-size: 2rem !important;
+            }
+        }
+        .down{
+            .left,.right{
+                font-size: 20px !important;
+            }
+        }
+    }
+    #sekcja2{
+        .right{
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 18px !important;
+            }
+        }
+    }
+    #sekcja3{
+        div{
+            img{
+                width: 35% !important;
+            }
+        }
+    }
+    #sekcja4{
+        flex-wrap: wrap;
+        .first{
+            width: 100% !important;
+            h2{
+                font-size: 3rem !important;
+            }
+            p{
+                margin-bottom: 2rem !important;
+                font-size: 22px !important;
+            }
+        }
+        .second{
+            width: 100% !important;
+            position: relative;
+            p{
+                font-size: 20px;
+                padding: 0 3rem;
+            }
+        }
+        .third{
+            width: 100% !important;
+            margin-top: 0 !important;
+            height: 22rem;
+        }
+    }
+    #sekcja5{
+        .top{
+            padding-top: 20rem !important;
+            .text{
+                width: 100% !important;
+                h2{
+                    font-size: 2rem !important;
+                }
+            }
+            .square{
+                .right{
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 601px){
+    #sekcja3{
+        div{
+            img{
+                width: 50% !important;
+            }
+        }
+    }
+    #sekcja5{
+        .top{
+            padding-top: 23rem !important;
+            .square{
+                margin: 1rem auto !important;
+            }
+        }
+    }
+}
+@media (max-width: 529px){
+    #sekcja5{
+        .top{
+            padding-top: 25rem !important;
+        }
+    }
+}
+@media (max-width: 450px){
+    header{
+        .left{
+            padding: 3rem;
+            h1{
+                font-size: 1.5rem !important;
+                width: 100%;
+            }
+            p{
+                width: 100%;
+                font-size: 18px;
+                line-height: 130%;
+            }
+        }
+    }
+    #sekcja1{
+        .top-div{
+            padding: 3rem;
+            .up{
+                h2{
+                    font-size: 1.5rem !important;
+                }
+            }
+            .down{
+                .left,.right{
+                    p{
+                        font-size: 16px;
+                        line-height: 130%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #sekcja2{
+        .right{
+            h2{
+                font-size: 1.5rem !important;
+            }
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
+    #sekcja4{
+        .first{
+            padding: 2rem;
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 20px !important;
+            }
+        }
+        .second{
+            p{
+                font-size: 18px;
+            }
+        }
+        .third{
+            height: 26rem;
+            padding: 2rem;
+        }
+    }
+    #sekcja5{
+        .top{
+            .squares{
+                .square{
+                    width: 78% !important;
+                    flex-wrap: wrap;
+                    .right{
+                        padding: 0;
+                        width: 100% !important;
+                        p{
+                            font-size: 14px !important;
+                            width: 100% !important;
+                            margin: 1rem 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

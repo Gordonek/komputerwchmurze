@@ -1,0 +1,98 @@
+@import "../../global/colors/colors";
+footer{
+    background-color: $gray;
+    position: relative;
+    height: 18rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding: 4rem 15rem 1rem;
+    div{
+        width: 25%;
+        h3{
+            font-size: 2rem;
+            line-height: 110%;
+            span{
+                color: $blue;
+            }
+        }
+        h3 + p{
+            margin: 1rem 0;
+            line-height: 100%;
+            font-size: 18px;
+        }
+        img{
+            width: 9rem;
+        }
+        ul{
+            margin-top: 1rem;
+            line-height: 150%;
+            list-style: none;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+    }
+    div ~ p{
+        text-align: center;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
+    p ~ a{
+        color: white;
+        font-weight: 500;
+        background-color: $gray;
+        text-decoration: none;
+        padding: 10px;
+        border: 2px solid $blue;
+        box-shadow: 3px 3px 0 0 white;
+    }
+}
+@media (max-width: 1450px){
+    footer{
+        padding: 4rem 8rem 1rem;
+        ul{
+            a{
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+@media (max-width: 1200px){
+    footer{
+        height: 35rem;
+        padding: 4rem 4rem 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        div{
+            width: 50%;        
+        }
+    }
+}
+@media (max-width: 700px){
+    footer{
+        height: 55rem;
+        div{
+            width: 100%;        
+        }
+    }
+}
+@media (max-width: 450px){
+    footer{
+        padding: 4rem 2rem 1rem;
+        ul{
+            a{
+                font-size: 14px !important;
+            }
+        }
+        div+p{
+            width: 80%;
+            bottom: 2%;
+        }
+    }
+}

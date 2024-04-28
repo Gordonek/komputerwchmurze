@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "../../components/navbar/navbar";
+@import "../../components/footer/footer";
+@import "../../global/scroll/scroll";
+@import "../../global/reset/reset";
+@import "../../global/animations/animations";
+header{
+    background-image: url("../../../images/team01.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    position: relative;
+    .background{
+        background-color: black;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    .text{
+        position: absolute;
+        top: 12rem;
+        left: 12rem;
+        h1{
+            font-size: 5rem;
+            width: 80%;
+            line-height: 100%;
+            color: white;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 3rem;
+        }
+        h1::after{
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 4rem;
+            height: 0.3rem;
+            background-color: $yellow;
+        }
+        p{
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 150%;
+            width: 70%;
+        }
+    }
+}
+#sekcja1{
+    position: relative;
+    .container{
+        padding: 8rem 0 8rem 14rem;
+    }
+    .left{
+        h2{
+            color: $gray;
+            font-size: 3rem;
+        }
+        p{
+            width: 30%;
+            line-height: 150%;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+    }
+    .right{
+        position: absolute;
+        height: 40rem;
+        width: 70rem;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }   
+}
+#sekcja1::after{
+    content: "";
+    position: absolute;
+    background-color: $blue;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 100%;
+    z-index: -1;
+}
+#sekcja2{
+    background-color: $blue;
+    padding: 5rem 0;
+    position: relative;
+    margin-bottom: 5rem;
+    div{
+        color: $gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p:first-child{
+            width: 60%;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 150%;
+            width: 70%;
+        }
+    }
+}
+#sekcja2::after{
+    content: "";
+    background-color: $yellow;
+    position: absolute;
+    bottom: -2rem;
+    right: 14rem;
+    height: 2rem;
+    width: 50rem;
+    clip-path: polygon(0 0,100% 0, 95% 100%, 5% 100%);
+}
+#sekcja3{
+    .container{
+        margin: 8rem 18rem;
+        display: flex;
+        
+        .left{
+            padding: 2rem;
+            width: 50%;
+            h2{
+                color: $gray;
+                font-size: 3rem;
+                line-height: 110%;
+                span{
+                    color: $blue;
+                }
+            }
+        }
+        .right{
+            padding: 2rem;
+            display: flex;
+            width: 40%;
+            div{
+                .text{
+                    line-height: 150%;
+                    font-size: 20px;
+                    span{
+                        color: $blue;
+                        font-weight: 900;
+                    }
+                }
+                .name{
+                    font-size: 22px;
+                    font-weight: 800;
+                    margin-left: 0.5rem;
+                }
+            }
+            .slick-next:before, .slick-prev:before{
+                color: $blue
+            }
+        }
+    }
+}

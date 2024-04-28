@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "../../components/navbar/navbar";
+@import "../../components/footer/footer";
+@import "../../global/scroll/scroll";
+@import "../../global/reset/reset";
+header{
+    .container{
+        margin: 14rem 0 6rem 10rem;
+        background-color: $blue;
+        position: relative;
+        padding: 14rem 0 12rem 4rem;
+        .left{
+            h1{
+                color: $gray;
+                font-size: 5rem;
+                line-height: 100%;
+                width: 30%;
+                position: absolute;
+                top: -5rem;
+            }
+            h1::after{
+                content: "";
+                position: absolute;
+                bottom: -1rem;
+                left: 0;
+                background-color: $yellow;
+                width: 5rem;
+                height: 0.3rem;
+            }
+            p{
+                color: white;
+                font-size: 20px;
+                font-weight: 500;
+                width: 25%;
+                line-height: 150%;
+            }
+        }
+        .right{
+            position: absolute;
+            right: 0;
+            top: -10rem;
+            width: 50rem;
+            height: 40rem;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+#sekcja1{
+    .container{
+        display: flex;
+        justify-content: space-around;
+        padding: 4rem;
+        margin: 0 10rem;
+        .left{
+            margin: 0 5rem;
+            width: 40%;
+            h2{
+                font-size: 3rem;
+            }
+            .ref{
+                p{
+                    color: $gray;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                }
+                span{
+                    font-weight: 800;
+                    margin-left: 0.5rem;
+                    a{
+                        text-decoration: none;
+                        color: $gray;
+                    }
+                }
+            }
+            .references{
+                display: flex;
+                align-items: center;
+                height: 5.25rem;
+                a{
+                    height: 55.19px;
+                    margin: 0 8px;
+                    svg{
+                        width: 1.8rem;
+                        height: 1.4rem;
+                        padding: 0.8rem;
+                        border: 2px solid $blue;
+                        box-shadow: 3px 3px 0 0 $yellow;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .right{
+            width: 60%;
+            margin: 0 5rem;
+            h3{
+                color: $blue;
+                line-height: 120%;
+                margin-bottom: 2rem;
+                font-size: 1.5rem;
+            }
+            form{
+                .input-box{
+                    width: 100%;
+                    padding: 10px;
+                    border: 3px solid $blue;
+                    margin: 0.5rem 0;
+                }
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                }
+                input[type="number"]{
+                    -moz-appearance: textfield;
+                }
+                .check{
+                    input{
+                        margin-right: 0.5rem;
+                    }
+                    font-size: 12px;
+                    line-height: 150%;
+                    font-weight: 500;
+                    color: $gray;
+                    margin-bottom: 1rem;
+                }
+                input[type=submit]{
+                    color: $gray;
+                    padding: 1px 30px;
+                    background-color: white;
+                    border: 3px solid $blue;
+                    box-shadow: 3px 3px 0 0 $yellow;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+#sekcja2{
+    .container{
+        margin: 5rem 10rem 10rem 0;
+        display: flex;
+        background-color: $blue;
+        .left{
+            margin: 10rem 0 -2rem 8rem;
+            overflow: hidden;
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .right{
+            background-color: $gray;
+            padding: 0 3rem 0 6rem;
+            margin: 12rem 0 -8rem -1rem;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            div{
+                h2{
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    color: white;
+                    span{
+                        color: $blue;
+                    }
+                }
+                p{
+                    color: white;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

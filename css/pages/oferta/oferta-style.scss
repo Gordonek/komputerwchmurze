@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "../../global/scroll/scroll";
+@import "../../global/reset/reset";
+@import "../../components/navbar/navbar";
+@import "../../components/footer/footer";
+@import "../../global/animations/animations";
+html, body{
+    overflow-x: hidden;
+}
+header{
+    margin-top: 3rem;
+    width: 100%;
+    height: 25rem;
+    background-color: $darkblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10rem;
+    img{
+        position: absolute;
+        right: 10%;
+        top: 2rem;
+        width: 25rem;
+    }
+    h1{
+        color: white;
+        line-height: 100%;
+        font-size: 5rem;
+        margin-left: 15rem;
+        position: relative;
+        width: 50%;
+    }
+    h1::after{
+        position: absolute;
+        content: "";
+        width: 5rem;
+        height: 0.3rem;
+        background-color: $yellow;
+        bottom: -1.5rem;
+        left: 0;
+    }
+    div{
+        background-color: $darkblue;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        height: 25rem;
+        width: 25rem;
+        z-index: 1;
+    }
+}
+#sekcja1{
+    div.up{
+        margin-left: 15rem;
+        color: $gray;
+        h2{
+            font-size: 3rem;
+            line-height: 110%;
+            width: 50%;
+            span{
+                color: $blue;
+            }
+        }
+        p{
+            width: 45%;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 150%;
+        }
+    }
+    .maindown{
+        margin: 5rem 8rem;
+        display: flex;
+        justify-content: space-between;
+        div.down{
+            border: 5px solid $blue;
+            box-shadow: inset 5px 5px 0 0 $yellow, 5px 5px 0 0 $yellow;
+            background-color: rgba(232, 222, 46, 0.1);
+            padding: 2rem;
+            width: 20rem;
+            height: 28rem;
+            .up2{
+                color: black;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+            }
+            .mid{
+                margin: 2rem 0;
+                color: $gray;
+                p{
+                    margin: 0.5rem 0;
+                    font-weight: 500;
+                    font-size: 16px;
+                    img{
+                        width: 16px;
+                        margin-right: 5px;
+                        margin-bottom: -0.2rem;
+                    }
+                }
+            }
+            .down2{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: $blue;
+                span{
+                    font-weight: 800;
+                    font-size: 20px;
+                    line-height: 100%;
+                }
+                p{
+                    font-size: 20px;
+                    margin-bottom: 1rem;
+                }
+                a{
+                    border: 3px solid $blue;
+                    text-decoration: none;
+                    padding: 2px 30px;
+                    font-weight: 500;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+#sekcja2{
+    height: 45rem;
+    background-color: $blue;
+    display: flex;
+    position: relative;
+    .first{
+        color: white;
+        width: 40rem;
+        padding: 7rem 10rem 6rem 15rem;
+        h2{
+            font-size: 3rem;
+            line-height: 100%;
+            span{
+                color: $yellow;
+            }
+        }
+        p{
+            line-height: 150%;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            border: 2px solid $yellow;
+            box-shadow: 3px 3px 0 0 white;
+            padding: 8px 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .second{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 10rem;
+        background-color: $yellow;
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            margin-right: 10rem;
+            line-height: 150%;
+            color: $gray;
+            font-weight: 400;
+            font-size: 24px;
+            span{
+                font-weight: 800;
+                position: relative;
+            }
+            span::after{
+                content: "";
+                position: absolute;
+                background-color: white;
+                width: 6rem;
+                height: 0.25rem;
+                border-radius: 10px;
+                bottom: -0.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .third{
+        background-color: $gray;
+        width: 30rem;
+        height: 25rem;
+        margin-top: -3rem;
+        padding: 5rem 3rem;
+        h3{
+            color: $yellow;
+            width: 90%;
+            line-height: 150%;
+            font-weight: 800;
+            font-size: 24px;
+        }
+        form{
+            margin: 2rem 0;
+            .input-box{
+                width: 80%;
+                padding: 5px;
+                border: 3px solid $yellow;
+                outline: none;
+                margin-bottom: 2rem;   
+            }   
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type="number"]{
+                margin-bottom: 0.5rem;
+                -moz-appearance: textfield;
+            }
+            .check{
+                margin-bottom: 2rem;
+                input[type=checkbox]{
+                    margin-right: 0.5rem;
+                }
+                color: white;
+                font-size: 0.7rem;
+                line-height: 150%;
+                width: 80%;
+            }
+            input[type=submit]{
+                background-color: $gray;
+                border: 3px solid $yellow;
+                box-shadow: 3px 3px 0 0 white;
+                color: white;
+                padding: 3px 35px;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}
+#sekcja3{
+    height: 55rem;
+    position: relative;
+    .text{
+        h3{
+            width: 40%;
+            margin: 5rem 0 0 10rem;
+            color: $gray;
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 120%;
+            span{
+                color: $blue;
+                font-size: 4.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .questions{
+        position: absolute;
+        right: 5rem;
+        padding: 2rem;
+        width: 55rem;
+        height: 34rem;
+        background-color: white;
+        .hidden{
+            display: none;
+        }
+        .question{
+            width: 100%;
+            position: relative;
+            border-bottom: 1px solid $blue;
+            cursor: pointer;
+            p{
+                padding: 10px 0;
+                font-weight: 600;
+                font-size: 18px;
+                img{
+                    position: absolute;
+                    bottom: 0.5rem;
+                    right: 0;
+                    width: 16px;
+                }
+            }
+        }
+        .answer{
+            background-color: rgba(70, 186, 232, 0.1);
+            padding: 10px;
+            p{
+                font-weight: 400;
+            }
+        }
+        .questions-after{
+            position: absolute;
+            background-color: $blue;
+            width: 40rem;
+            height: 35rem;
+            right: -5rem;
+            top: -5rem;
+            z-index: -1 ;
+        }
+        .questions-before{
+            position: absolute;
+            background-color: $yellow;
+            width: 8rem;
+            height: 28rem;
+            left: -8rem;
+            bottom: 2rem;
+        }
+    }
+}
+@media (max-width: 1400px){
+    header{
+        img,div{
+            width: 20rem;
+            right: 0
+        }
+    }
+    #sekcja1{
+        .up{
+            margin-left: 10rem !important;
+        }
+    }
+    #sekcja2{
+        .first{
+            padding: 5rem 10rem 6rem 5rem;
+        }
+        .second{
+            padding-left: 2rem;
+        }
+        .third{
+            padding: 5rem;
+            .input-box{
+                width: 90%;
+            }
+        }
+    }
+    #sekcja3{
+        .questions-after{
+            width: 35rem !important;
+        }
+    }
+}
+@media (max-width: 1200px){
+    header{
+        margin-top: 0;
+        h1{
+            margin-left: 7rem;
+            width: 70%;
+        }
+    }
+    #sekcja1{
+        .up{
+            h2{
+                width: 70% !important;
+            }
+            p{
+                width: 70% !important;
+            }
+        }
+    }
+    #sekcja2{
+        .second{
+            padding-left: 0;
+            width: 100%;
+            clip-path: none;
+            p{
+                margin-right: 0;
+            }
+        }
+        .third{
+            padding: 3rem;
+            margin-top: 2rem;
+            height: 27rem;
+            h3{
+                width: 100%;
+                font-size: 22px;
+            }
+            form{
+                .input-box{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+                .check{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    #sekcja3{
+        .text{
+            h3{
+                margin: 3rem 0 2rem 5rem;
+            }
+        }
+        .questions{
+            right: 10rem;
+            width: 65%;
+            height: 65%;
+            .question{
+                p{
+                    padding: 5px 0 !important;
+                    font-size: 1rem !important;
+                }
+            }
+        }
+        .questions-before{
+            display: none;
+        }
+        .questions-after{
+            height: 100% !important;
+            width: 70% !important;
+            top: -20rem !important;
+            right: -10rem !important;
+        }
+    }
+}
+@media (max-width: 1000px){
+    header{
+        h1{
+            width: 80%;
+        }
+        img,div{
+            display: none;
+        }
+    }
+    #sekcja1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .up{
+            margin: 0 !important;
+            h2,p{
+                margin: 0 auto;
+                width: 80% !important;
+            }
+        }
+    }
+    #sekcja2{
+        .first{
+            width: 20rem;
+            padding: 3rem;
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 20px !important;
+            }
+        }
+    }
+    #sekcja3{
+        .text{
+            h3{
+                width: 60%;
+            }
+        }
+        .questions{
+            position: static;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .questions-after{
+            display: none;
+        }
+    }
+}
+@media (max-width: 700px){
+    header{
+        height: 15rem;
+        margin-bottom: 5rem;
+        h1{
+            margin-left: 2rem;
+            font-size: 3.5rem;
+            width: 90%;
+        }
+    }
+    #sekcja1{
+        .up{
+            h2{
+                font-size: 2.5rem !important;
+                width: 90% !important;
+            }
+            p{
+                font-size: 22px !important;
+                width: 90% !important;
+            }
+        }
+    }
+    #sekcja2{
+        flex-wrap: wrap;
+        .first{
+            width: 100% !important;
+            h2{
+                font-size: 3rem !important;
+            }
+            p{
+                margin-bottom: 2rem !important;
+                font-size: 22px !important;
+            }
+        }
+        .second{
+            width: 100% !important;
+            position: static;
+            p{
+                font-size: 20px;
+                padding: 0 3rem;
+            }
+        }
+        .third{
+            width: 100% !important;
+            margin-top: 0 !important;
+            height: 22rem;
+        }
+    }
+    #sekcja3{
+        margin-top: 20rem;
+        height: 100%;
+        .text{
+            h3{
+                width: 80%;
+                margin: 2rem auto 0 auto;
+                span{
+                    font-size: 3.5rem;
+                }
+            }
+        }
+        .questions{
+            width: 90%;
+            padding: 2rem 0;
+        }
+    }
+}
+@media (max-width: 601px){
+    #sekcja3{
+        margin-top: 25rem;
+    }
+}
+@media (max-width: 450px){
+    header{
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    #sekcja1{
+        .up{
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        .maindown{
+            margin: 3rem;
+            .down{
+                width: 100% !important;
+                height: 90% !important;
+                .up2{
+                    font-size: 1.5rem;
+                }
+                .mid{
+                    margin: 1rem 0 !important;
+                }
+            }
+        }
+    }
+    #sekcja2{
+        .first{
+            padding: 2rem;
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 20px !important;
+            }
+        }
+        .second{
+            p{
+                font-size: 18px;
+            }
+        }
+        .third{
+            height: 26rem;
+            padding: 2rem;
+        }
+    }
+    #sekcja3{
+        margin-top: 20rem;
+        .text{
+            h3{
+                span{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 358px){
+    #sekcja3{
+        margin-top: 22rem;
+        .questions{
+            padding: 2rem 0;
+        }
+    }
+}
